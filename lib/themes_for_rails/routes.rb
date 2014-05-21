@@ -4,7 +4,7 @@ module ThemesForRails
 
     def themes_for_rails
       theme_dir = ThemesForRails.config.themes_routes_dir
-      constraints = { :theme => /[\w\.]*/ } 
+      #constraints = { :theme => /[\w\.]*/ } 
       
       match "#{theme_dir}/:theme/stylesheets/*asset" => 'themes_for_rails/assets#stylesheets', 
         :as => :base_theme_stylesheet, :constraints => constraints, :via=> [:get,:post]
